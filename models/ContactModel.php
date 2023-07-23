@@ -4,6 +4,8 @@ class ContactModel // run the commented code for create table on your DB (run on
     private $pdo;
     private $host = '127.0.0.1';
     private $dbname = 'contacts';
+    private $username = 'contacts';
+    private $pass = '';
     private $opt = [
         PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -11,17 +13,7 @@ class ContactModel // run the commented code for create table on your DB (run on
     ];
     public function __construct()
     {
-        
-            $this->pdo = new PDO("mysql:host=".$this->host.";dbname=".$this->dbname."", 'root', '',$this->opt);
-        // $sql = "
-        // CREATE TABLE contact_list (
-        //     id INT AUTO_INCREMENT PRIMARY KEY,
-        //     name VARCHAR(255) NOT NULL,
-        //     phone VARCHAR(20) NOT NULL
-        // )
-        // ";
-        // $this->pdo->exec($sql);
-         
+            $this->pdo = new PDO("mysql:host=".$this->host.";dbname=".$this->dbname."", $this->username, $this->pass,$this->opt);
     }
 
     public function addContact($data)
