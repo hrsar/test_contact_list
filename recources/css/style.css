@@ -1,0 +1,35 @@
+body {
+    background-color:  #adb5bd;
+}
+.container {
+    height: 100vh!important;
+}
+.show_contacts_block, .add_contacts_block {
+    background: rgba(255, 255, 255, 1);
+    width: 322px;
+    margin: auto;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.header_block, .current_contact:not(:last-child) {
+    border-bottom: 2px solid rgba(238, 238, 238, 1);
+}
+.send_btn {
+    width: 99px;
+    display: inline-block;
+    height: 42px;
+    background: rgba(77, 89, 161, 1);
+    border: 1px solid rgba(77, 89, 161, 1);
+
+}
+.send_btn:hover {
+    background: white;
+    color: rgba(77, 89, 161, 1);
+}
+.del_contact_btn {
+    cursor: pointer;
+}
+.phone_text {
+    font-size: 12px;
+    color: #666666;
+}
